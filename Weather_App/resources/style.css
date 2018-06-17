@@ -1,0 +1,79 @@
+body {
+    background-image: url(img/city_vector.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    color: white;
+}
+
+.hero {
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(31,34,118, 0.5);
+    z-index: -5;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: rgb(69, 106, 171);
+
+}
+
+.navbar a {
+    color: white;
+    font-size: 25px;
+}
+
+/* Weather Section */
+
+.weather {
+    border: 1px solid white;
+    margin-top: 10rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 20px;
+}
+
+#icon-desc {
+    font-size: 5rem;
+    padding-top: 2rem;
+}
+
+.humidity, .wind, .visibility {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    font-size: 1.5rem;
+}
+
+#description {
+    font-size: 2rem;
+}
+
+#description p {
+    font-size: 2.1rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+#temperature {
+    font-size: 7rem;
+}
+
+#icon-thermometer {
+    font-size: 5rem;
+}
+
+
+/* Weather Body Section */
+
+
+#humidity, #wind, #visibility {
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
