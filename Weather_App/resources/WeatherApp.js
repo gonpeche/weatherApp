@@ -3,7 +3,7 @@ window.onload = function () {
     var appId = "appid=95176c8edea30e33338e0eaddd53a916";
     var location = document.getElementById("location");
     var currentDate = new Date(); //Display actual date
-	var dayNight = "day";
+    var dayNight = "day";
 
     httpReqIpAsync(ipUrl);
 
@@ -51,24 +51,26 @@ window.onload = function () {
                 var temp = document.getElementById("temperature");
                 temp.innerHTML = `${tempCelcius}<i id="icon-thermometer" class="wi wi-thermometer"></i>`; 
                 var humidityElem = document.getElementById("humidity");
-				humidityElem.innerHTML = `${humidity}%`;
-				var windElem = document.getElementById("wind");
-				windElem.innerHTML = `${windSpeed * 1.6} km/h`;
-				var visibilityElem = document.getElementById("visibility");
-                visibilityElem.innerHTML = `${visibility * 1.6 / 1000} km`;
+		humidityElem.innerHTML = `${humidity}%`;
+		var windElem = document.getElementById("wind");
+		windElem.innerHTML = `${(windSpeed * 1.6).toFixed(2)} km/h`;
+		var visibilityElem = document.getElementById("visibility");
+                visibilityElem.innerHTML = `${(visibility * 1.6 / 1000).toFixed(2)} km`;
                 
                 //find whether is day or night
-				var sunSet = jsonWeather.sys.sunset;
-				//sunset is 10 digits and currentDate 13 so div by 1000
+		var sunSet = jsonWeather.sys.sunset;
+		//sunset is 10 digits and currentDate 13 so div by 1000
                 var timeNow = Math.round(currentDate / 1000);
-				console.log(timeNow + "<" + sunSet +" = "+(timeNow < sunSet))
-				dayNight = (timeNow < sunSet) ? "day" : "night";
+		console.log(timeNow + "<" + sunSet +" = "+(timeNow < sunSet))
+		dayNight = (timeNow < sunSet) ? "day" : "night";
 
             }
         }
         httpReqWeather.send();
     }
 }
+
+
 
 
 
